@@ -9,7 +9,7 @@ foreach ($switch in $aggSwitches) {
 }
 
 foreach ($switch in $workstationList.Keys) {
-    Write-Host "Workstations connected to switch $switch:"
+    Write-Host "Workstations connected to switch $($switch):"
     foreach ($workstation in $workstationList[$switch]) {
         $hostname = nslookup $workstation
         Write-Host "`t$workstation ($hostname)"
