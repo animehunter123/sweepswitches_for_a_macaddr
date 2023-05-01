@@ -4,8 +4,8 @@ $workstationList = @{}
 
 foreach ($switch in $aggSwitches) {
     $output = ssh admin@$switch "show mac-address"
-    $matches = $macRegex.Matches($output)
-    $workstationList[$switch] = $matches.Value
+    $matches_res = $macRegex.Matches($output)
+    $workstationList[$switch] = $matches_res.Value
 }
 
 foreach ($switch in $workstationList.Keys) {
