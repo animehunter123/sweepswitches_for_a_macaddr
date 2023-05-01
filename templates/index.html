@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connected Workstations</title>
+</head>
+<body>
+    <h1>Connected Workstations</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Switch</th>
+                <th>MAC Address</th>
+                <th>Hostname</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for workstation in workstation_info %}
+            <tr>
+                <td>{{ workstation["switch"] }}</td>
+                <td>{{ workstation["mac_address"] }}</td>
+                <td>{{ workstation["hostname"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
