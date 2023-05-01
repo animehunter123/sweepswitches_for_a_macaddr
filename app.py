@@ -5,7 +5,7 @@ import re
 app = Flask(__name__)
 
 agg_switches = ["192.168.1.1", "192.168.1.2", "192.168.1.3"]
-mac_regex = re.compile(r"([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})")
+mac_regex = re.compile(r"([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})") # Fa-f is used to match hexadecimal digits in the MAC address. The letters A-F represent the hexadecimal digits 10-15 and the letters a-f represent the hexadecimal digits 10-15 in lowercase1. So, Fa-f matches any hexadecimal digit from 10 to 15 in uppercase or lowercase.
 workstation_list = {}
 
 @app.route("/")
